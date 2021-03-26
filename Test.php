@@ -9,8 +9,12 @@ function excel()
 
 
     $api_part = 'liveSignDetail';
-    $data = curl_get("http://test.app.newpinehealthcare.com/api/app/$api_part?user_id=34&senior_id=65&token=acb60167cfc8c644e4b365ae7eada5afd922daf8");
+    $query = '?token=ffb9c05cc3578750024cf6d3ecdb56271ef34441&user_id=21&senior_id=65';
+    $initData = curl_get("http://test.app.newpinehealthcare.com/api/app/initialMesDetail$query");
+    $initData = json_decode($initData, true);
+    $initData = $initData['data'];
 
+    $data = curl_get("http://test.app.newpinehealthcare.com/api/app/$api_part$query");
     $data = json_decode($data, true);
     $data = $data['data'];
 

@@ -2392,11 +2392,11 @@
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663450204"><Data ss:Type="String">长者姓名</Data></Cell>
-    <Cell ss:StyleID="s109"><Data ss:Type="String">{{}}</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="String">{{name}}</Data></Cell>
     <Cell ss:StyleID="s110"/>
     <Cell ss:StyleID="s110"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663450224"><Data ss:Type="String">长者性别</Data></Cell>
-    <Cell ss:MergeAcross="2" ss:StyleID="s114"><Data ss:Type="String">□男   □女  </Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="s114"><Data ss:Type="String">{{sex}}</Data></Cell>
     <Cell ss:MergeAcross="1" ss:MergeDown="5" ss:StyleID="m2020663450264"><Data
       ss:Type="String">长者照片</Data></Cell>
     <Cell ss:StyleID="s90"/>
@@ -2404,29 +2404,29 @@
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663450284"><Data ss:Type="String">长者年龄</Data></Cell>
-    <Cell ss:MergeAcross="2" ss:StyleID="s126"/>
+    <Cell ss:MergeAcross="2" ss:StyleID="s126"><Data ss:Type="String">{{age}}</Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663450324"><Data ss:Type="String">电子邮箱</Data></Cell>
-    <Cell ss:MergeAcross="2" ss:StyleID="s126"/>
+    <Cell ss:MergeAcross="2" ss:StyleID="s126"><Data ss:Type="String">{{email}}</Data></Cell>
     <Cell ss:Index="14" ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663446628"><Data ss:Type="String">本人电话</Data></Cell>
-    <Cell ss:MergeAcross="2" ss:StyleID="s114"/>
+    <Cell ss:MergeAcross="2" ss:StyleID="s114"><Data ss:Type="String">{{mobile}}</Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663446668"><Data ss:Type="String">微信号</Data></Cell>
-    <Cell ss:MergeAcross="2" ss:StyleID="s114"/>
+    <Cell ss:MergeAcross="2" ss:StyleID="s114"><Data ss:Type="String">{{wechat_number}}</Data></Cell>
     <Cell ss:Index="14" ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663446708"><Data ss:Type="String">居民身份证号码</Data></Cell>
-    <Cell ss:MergeAcross="7" ss:StyleID="m2020663446728"/>
+    <Cell ss:MergeAcross="7" ss:StyleID="m2020663446728"><Data ss:Type="String">{{idcard}}</Data></Cell>
     <Cell ss:Index="14" ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663449728"><Data ss:Type="String">家庭住址（户口）</Data></Cell>
-    <Cell ss:MergeAcross="7" ss:StyleID="m2020663449748"/>
+    <Cell ss:MergeAcross="7" ss:StyleID="m2020663449748"><Data ss:Type="String">{{address}}</Data></Cell>
     <Cell ss:Index="14" ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
@@ -2451,20 +2451,20 @@
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663440784"><Data ss:Type="String">联系电话</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663440804"><Data ss:Type="String">{{}}</Data></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663440804"><Data ss:Type="String">{{guardian_mobile}}</Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663440824"><Data ss:Type="String">电子邮箱</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663440844"><Data ss:Type="String">{{}}</Data></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663440844"><Data ss:Type="String">{{guardian_email}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663440864"><Data ss:Type="String">居民身份证号码</Data></Cell>
-    <Cell ss:StyleID="s163"><Data ss:Type="String">{{}}</Data></Cell>
+    <Cell ss:StyleID="s163"><Data ss:Type="String">{{guardian_idcard}}</Data></Cell>
     <Cell ss:StyleID="s164"/>
     <Cell ss:StyleID="s164"/>
     <Cell ss:StyleID="s164"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663440884"><Data ss:Type="String">微信号</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663440904"><Data ss:Type="String">{{}}</Data></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663440904"><Data ss:Type="String">{{guardian_wechat_number}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
@@ -2499,9 +2499,9 @@
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663440992"><Data ss:Type="String">入住房型</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663441012"><Data ss:Type="String">{{}}</Data></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663441012"><Data ss:Type="String">{{live_room_type}}</Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663441032"><Data ss:Type="String">入住房号-床位</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663441052"><Data ss:Type="String">{{}}</Data></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663441052"><Data ss:Type="String">{{room_num}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="36">
@@ -2509,7 +2509,7 @@
     <Cell ss:StyleID="s198"><Data ss:Type="String">服务费                月交</Data></Cell>
     <Cell ss:StyleID="s199"><Data ss:Type="String">标准</Data></Cell>
     <Cell ss:MergeAcross="3" ss:StyleID="m2020663441072"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><U><Font html:Color="#000000">            </Font></U><Font
+      xmlns="http://www.w3.org/TR/REC-html40"><U><Font html:Color="#000000"><Data ss:Type="String">{{service_fee_month}}</Data></Font></U><Font
        html:Color="#000000">元人民币</Font></ss:Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663441092"><Data ss:Type="String">支付方式</Data></Cell>
     <Cell ss:MergeAcross="3" ss:StyleID="m2020663441112"><Data ss:Type="String">月交□现金□银行卡□支付宝□微信</Data></Cell>
@@ -2558,23 +2558,23 @@
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663441260"><Data ss:Type="String">姓名</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663441280"/>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663441280"><Data ss:Type="String">{{nursing_name}}</Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663441300"><Data ss:Type="String">性别</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663441320"><Data ss:Type="String">□男   □女  </Data></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663441320"><Data ss:Type="String">{{nursing_sex}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663448272"><Data ss:Type="String">联系电话</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663448292"/>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663448292"><Data ss:Type="String">{{nursing_mobile}}</Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663448312"><Data ss:Type="String">与长者关系</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663448332"/>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663448332"><Data ss:Type="String">{{nursing_relation}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663448352"><Data ss:Type="String">居民身份证号码</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663448372"/>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663448372"><Data ss:Type="String">{{nursing_idcard}}</Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663448392"><Data ss:Type="String">生效日期</Data></Cell>
     <Cell ss:MergeAcross="3" ss:StyleID="m2020663448412"><ss:Data ss:Type="String"
       xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000"> </Font><U><Font
@@ -2596,7 +2596,7 @@
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663445648"><Data ss:Type="String">家庭住址（户口）</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663445668"/>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663445668"><Data ss:Type="String">{{nursing_address}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
@@ -2664,15 +2664,15 @@
    <Row ss:AutoFitHeight="0" ss:Height="21">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663443488"><Data ss:Type="String">生肖</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663443508"/>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663443508"><Data ss:Type="String">{{zodiac}}</Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663443528"><Data ss:Type="String">政治面貌</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663443548"/>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663443548"><Data ss:Type="String">{{}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="21">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663443568"><Data ss:Type="String">民族</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663443588"><Data ss:Type="String">□汉族   □少数民族_____     </Data></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663443588"><Data ss:Type="String">□汉族   □少数民族{{nation}}     </Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663443608"><Data ss:Type="String">宗教信仰</Data></Cell>
     <Cell ss:MergeAcross="3" ss:StyleID="m2020663443628"><Data ss:Type="String">□无   □有                </Data></Cell>
     <Cell ss:StyleID="s90"/>
@@ -2692,13 +2692,13 @@
    <Row ss:AutoFitHeight="0" ss:Height="21">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663441468"><Data ss:Type="String">文化程度</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663441488"><Data ss:Type="String">□文盲及半文盲□小学□初中□高中/技校/中专□大学专科及以上□不详</Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663441488"><Data ss:Type="String">{{education_level}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="54">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663441508"><Data ss:Type="String">职业</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663441528"><Data ss:Type="String">□国家机关/党群组织/企业/事业单位负责人□专业技术人员□办事人员和有关人员□商业、服务业人员□ 农、林、牧、渔、水利业生产人员□生产、运输设备操作人员及有关人员□军人□不便分类的其他从业人员</Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663441528"><Data ss:Type="String">{{profession}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="21">
