@@ -2710,28 +2710,27 @@
    <Row ss:AutoFitHeight="0" ss:Height="21">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663444776"><Data ss:Type="String">婚姻状况</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663444796"><Data ss:Type="String">□未婚□已婚□丧偶□离婚□未说明的婚姻状况                        </Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663444796"><Data ss:Type="String">{{marital_status}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="38.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663444816"><Data ss:Type="String">医疗费用&#10;支付方式</Data></Cell>
     <Cell ss:MergeAcross="9" ss:StyleID="m2020663444836"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">□城镇职工基本医疗保险□城镇居民基本医疗保险</Font><Font> □新型农村合作医疗 </Font><Font
-       html:Color="#000000">□贫困救助 □商业医疗保险 □全公费 □全自费□其他         </Font></ss:Data></Cell>
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">{{medical_pay_method}}</Font></ss:Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="38.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663445152"><Data ss:Type="String">居住状况</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663445172"><Data ss:Type="String">□独居□与配偶/伴侣居住□与子女居住□与父母居住□与兄弟姐妹居住□与其他亲属居住□与非亲属关系的人居住□养老机构                        </Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663445172"><Data ss:Type="String">{{live_status}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663445192"><Data ss:Type="String">经济来源</Data></Cell>
     <Cell ss:MergeAcross="9" ss:StyleID="m2020663445212"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">□退休金/养老金□子女补贴□亲友资助□其他</Font><U><Font
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">{{money_source}}</Font><U><Font
         html:Color="#000000">            </Font></U><Font html:Color="#000000"> </Font></ss:Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
@@ -2858,56 +2857,56 @@
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663447104"><Data ss:Type="String">睡眠</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663447124"><Data ss:Type="String">□良好    □早醒    □易醒    □难入睡    □其他            </Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663447124"><Data ss:Type="String">{{life0}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663447232"><Data ss:Type="String">皮肤情况</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663447252"><Data ss:Type="String">□良好    □瘙痒    □皮损    □褥疮</Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663447252"><Data ss:Type="String">{{life1}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663447272"><Data ss:Type="String">饮食偏好</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663447292"><Data ss:Type="String">□低钠&#160;□高蛋白&#160;□糖尿病餐  □硬饭  □软饭  □粥   □素餐  □其他               </Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663447292"><Data ss:Type="String">{{life2}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663447312"><Data ss:Type="String">食物制成要求</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663447332"><Data ss:Type="String">□鼻饲匀浆膳食&#160;□无形软食&#160;□流质软食&#160;□半流质饮食&#160;□浓稠液体食物  □糊状食物</Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663447332"><Data ss:Type="String">{{life3}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663447648"><Data ss:Type="String">饮食方式</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663447668"><Data ss:Type="String">□正常    □需喂食  □鼻饲</Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663447668"><Data ss:Type="String">{{life4}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663447688"><Data ss:Type="String">牙齿状况</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663447708"><Data ss:Type="String">□良好    □无牙    □脱落     □无假牙    □有假牙（□上 □下 □全部  □    只）    </Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663447708"><Data ss:Type="String">{{life5}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663447728"><Data ss:Type="String">小便</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663447748"><Data ss:Type="String">□正常    □失禁    □尿管</Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663447748"><Data ss:Type="String">{{life6}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663449104"><Data ss:Type="String">大便</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663449124"><Data ss:Type="String">□正常    □失禁    □粪袋</Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663449124"><Data ss:Type="String">{{life7}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663449144"><Data ss:Type="String">疼痛</Data></Cell>
     <Cell ss:MergeAcross="9" ss:StyleID="m2020663449164"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">□无      □有，部位</Font><U><Font
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">{{life8}}，部位</Font><U><Font
         html:Color="#000000">            </Font></U></ss:Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
@@ -2915,7 +2914,7 @@
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663449184"><Data ss:Type="String">视力</Data></Cell>
     <Cell ss:MergeAcross="9" ss:StyleID="m2020663449204"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">□良好    □模糊        □失明（□左 □右）  □辅助器：</Font><U><Font
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">{{life9}}</Font><U><Font
         html:Color="#000000">           </Font></U></ss:Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
@@ -2923,26 +2922,26 @@
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663450352"><Data ss:Type="String">听力</Data></Cell>
     <Cell ss:MergeAcross="9" ss:StyleID="m2020663450372"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">□良好    □要大声      □失听（□左 □右）  □辅助器：</Font><U><Font
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">{{life10}}</Font><U><Font
         html:Color="#000000">           </Font></U></ss:Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663450392"><Data ss:Type="String">语言表达</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663450412"><Data ss:Type="String">□良好    □只能说简单句语    □不能通过过言语进行沟通    </Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663450412"><Data ss:Type="String">{{life11}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663450432"><Data ss:Type="String">理解能力</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663450452"><Data ss:Type="String">□良好    □只能理解简单语句  □不能理解</Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663450452"><Data ss:Type="String">{{life12}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="41.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663449936"><Data ss:Type="String">活动能力</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663449956"><Data ss:Type="String">□卧床    □不需要辅助用具    &#10;□需要辅助用具 □手杖 □四脚杖  □助行器  □轮子助行器  □轮椅&#160;□其他__________</Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663449956"><Data ss:Type="String">{{life13}}__________</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
@@ -2951,7 +2950,7 @@
       xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">3</Font><Font
        html:Face="宋体" html:Color="#000000">个月内跌倒</Font></ss:Data></Cell>
     <Cell ss:MergeAcross="9" ss:StyleID="m2020663449996"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">□无      □有</Font><U><Font
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">{{life14}}</Font><U><Font
         html:Color="#000000">      </Font></U><Font html:Color="#000000">次</Font></ss:Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
@@ -2959,7 +2958,7 @@
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663450016"><Data ss:Type="String">吸烟</Data></Cell>
     <Cell ss:MergeAcross="9" ss:StyleID="m2020663450036"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">□无      □有</Font><U><Font
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">{{life15}}</Font><U><Font
         html:Color="#000000">         </Font></U><Font html:Color="#000000">                  </Font></ss:Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
@@ -2967,7 +2966,7 @@
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663453264"><Data ss:Type="String">饮酒</Data></Cell>
     <Cell ss:MergeAcross="9" ss:StyleID="m2020663453284"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">□无      □有</Font><U><Font
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">{{life16}}</Font><U><Font
         html:Color="#000000">         </Font></U></ss:Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
