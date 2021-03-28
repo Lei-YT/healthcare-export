@@ -2345,7 +2345,7 @@
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="8" ss:StyleID="s93"><ss:Data ss:Type="String"
       xmlns="http://www.w3.org/TR/REC-html40"><B><Font html:Color="#000000">合同编号：</Font><U><Font
-         html:Color="#000000">                               </Font></U><Font
+         html:Color="#000000">{{serial_num}}</Font></U><Font
         html:Color="#000000">         </Font></B></ss:Data></Cell>
     <Cell ss:StyleID="s91"/>
     <Cell ss:StyleID="s91"/>
@@ -2470,7 +2470,7 @@
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663442656"><Data ss:Type="String">家庭住址（户口）</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663442676"><Data ss:Type="String">{{}}</Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663442676"><Data ss:Type="String"></Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
@@ -2487,12 +2487,12 @@
         html:Color="#000000">     </Font></U><Font html:Color="#000000">月</Font></ss:Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663442756"><Data ss:Type="String">起止日期</Data></Cell>
     <Cell ss:MergeAcross="3" ss:StyleID="m2020663442776"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><U><Font html:Color="#000000">      </Font></U><Font
-       html:Color="#000000">年</Font><U><Font html:Color="#000000">  </Font></U><Font
-       html:Color="#000000">月</Font><U><Font html:Color="#000000">  </Font></U><Font
-       html:Color="#000000">日&#45;-</Font><U><Font html:Color="#000000">      </Font></U><Font
-       html:Color="#000000">年</Font><U><Font html:Color="#000000">  </Font></U><Font
-       html:Color="#000000">月</Font><U><Font html:Color="#000000">  </Font></U><Font
+      xmlns="http://www.w3.org/TR/REC-html40"><U><Font html:Color="#000000">{{start_time_year}}</Font></U><Font
+       html:Color="#000000">年</Font><U><Font html:Color="#000000">{{start_time_month}}</Font></U><Font
+       html:Color="#000000">月</Font><U><Font html:Color="#000000">{{start_time_day}}</Font></U><Font
+       html:Color="#000000">日&#45;-</Font><U><Font html:Color="#000000">{{end_time_year}}</Font></U><Font
+       html:Color="#000000">年</Font><U><Font html:Color="#000000">{{end_time_month}}</Font></U><Font
+       html:Color="#000000">月</Font><U><Font html:Color="#000000">{{end_time_day}}</Font></U><Font
        html:Color="#000000">日</Font></ss:Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
@@ -2512,14 +2512,14 @@
       xmlns="http://www.w3.org/TR/REC-html40"><U><Font html:Color="#000000"><Data ss:Type="String">{{service_fee_month}}</Data></Font></U><Font
        html:Color="#000000">元人民币</Font></ss:Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663441092"><Data ss:Type="String">支付方式</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663441112"><Data ss:Type="String">月交□现金□银行卡□支付宝□微信</Data></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663441112"><Data ss:Type="String">月交{{pey_method}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeDown="2" ss:StyleID="s172"><Data ss:Type="String">服务费        趸交</Data></Cell>
     <Cell ss:StyleID="s199"><Data ss:Type="String">年数</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663440388"><Data ss:Type="String">□一年 □二年 □三年 □四年 □五年</Data></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663440388"><Data ss:Type="String">{{service_year_method}}</Data></Cell>
     <Cell ss:MergeAcross="1" ss:MergeDown="1" ss:StyleID="m2020663440408"><Data
       ss:Type="String">支付方式</Data></Cell>
     <Cell ss:MergeAcross="3" ss:StyleID="m2020663440428"><Data ss:Type="String">签约时一次性</Data></Cell>
@@ -2529,10 +2529,10 @@
     <Cell ss:StyleID="s90"/>
     <Cell ss:Index="3" ss:StyleID="s199"><Data ss:Type="String">总额</Data></Cell>
     <Cell ss:MergeAcross="3" ss:StyleID="m2020663440448"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><U><Font html:Color="#000000">            </Font></U><Font
+      xmlns="http://www.w3.org/TR/REC-html40"><U><Font html:Color="#000000">{{service_totle_fee}}</Font></U><Font
        html:Color="#000000">元人民币</Font></ss:Data></Cell>
     <Cell ss:Index="10" ss:MergeAcross="3" ss:StyleID="m2020663440468"><Data
-      ss:Type="String">□现金□银行卡□支付宝□微信</Data></Cell>
+      ss:Type="String">{{pay_method_1}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
@@ -2540,14 +2540,14 @@
     <Cell ss:Index="3" ss:StyleID="s199"><Data ss:Type="String">折算</Data></Cell>
     <Cell ss:MergeAcross="9" ss:StyleID="m2020663440488"><ss:Data ss:Type="String"
       xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">注：折合月费 </Font><U><Font
-        html:Color="#000000">          </Font></U><Font html:Color="#000000"> 元人民币，优惠差额 </Font><U><Font
-        html:Color="#000000">          </Font></U><Font html:Color="#000000"> 元人民币/月</Font></ss:Data></Cell>
+        html:Color="#000000">{{service_discount_month}}</Font></U><Font html:Color="#000000"> 元人民币，优惠差额 </Font><U><Font
+        html:Color="#000000">{{discount_month_fee}}</Font></U><Font html:Color="#000000"> 元人民币/月</Font></ss:Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663441200"><Data ss:Type="String">复印件影像存档</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663441220"><Data ss:Type="String">□签署的《养老服务合同》  </Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663441220"><Data ss:Type="String">{{is_contract}}  </Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
@@ -2578,19 +2578,19 @@
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663448392"><Data ss:Type="String">生效日期</Data></Cell>
     <Cell ss:MergeAcross="3" ss:StyleID="m2020663448412"><ss:Data ss:Type="String"
       xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000"> </Font><U><Font
-        html:Color="#000000">      </Font></U><Font html:Color="#000000">年</Font><U><Font
-        html:Color="#000000">  </Font></U><Font html:Color="#000000">月</Font><U><Font
-        html:Color="#000000">  </Font></U><Font html:Color="#000000">日</Font></ss:Data></Cell>
+        html:Color="#000000">{{take_effect_date_year}}</Font></U><Font html:Color="#000000">年</Font><U><Font
+        html:Color="#000000">{{take_effect_date_month}}</Font></U><Font html:Color="#000000">月</Font><U><Font
+        html:Color="#000000">{{take_effect_date_day}}</Font></U><Font html:Color="#000000">日</Font></ss:Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663445568"><Data ss:Type="String">月费标准</Data></Cell>
     <Cell ss:MergeAcross="3" ss:StyleID="m2020663445588"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><U><Font html:Color="#000000">            </Font></U><Font
+      xmlns="http://www.w3.org/TR/REC-html40"><U><Font html:Color="#000000">{{month_money}}</Font></U><Font
        html:Color="#000000">元人民币</Font></ss:Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663445608"><Data ss:Type="String">支付方式</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663445628"><Data ss:Type="String">月交□现金□银行卡□支付宝□微信</Data></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663445628"><Data ss:Type="String">月交{{pay_method_2}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
@@ -2602,7 +2602,7 @@
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663445984"><Data ss:Type="String">复印件影像存档</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663446004"><Data ss:Type="String"> □体检报告书   □身份证  □签署的《私人护理员协议》  </Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663446004"><Data ss:Type="String"> {{file}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="15">
@@ -2656,9 +2656,9 @@
    <Row ss:AutoFitHeight="0" ss:Height="21">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663446024"><Data ss:Type="String">出生日期</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663446044"/>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663446044"><Data ss:Type="String">{{birthday}}</Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663446064"><Data ss:Type="String">社保卡号</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663446084"/>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663446084"><Data ss:Type="String">{{sin}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="21">
@@ -2666,7 +2666,7 @@
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663443488"><Data ss:Type="String">生肖</Data></Cell>
     <Cell ss:MergeAcross="3" ss:StyleID="m2020663443508"><Data ss:Type="String">{{zodiac}}</Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663443528"><Data ss:Type="String">政治面貌</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663443548"><Data ss:Type="String">{{}}</Data></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663443548"><Data ss:Type="String">{{status}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="21">
@@ -2674,7 +2674,7 @@
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663443568"><Data ss:Type="String">民族</Data></Cell>
     <Cell ss:MergeAcross="3" ss:StyleID="m2020663443588"><Data ss:Type="String">□汉族   □少数民族{{nation}}     </Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663443608"><Data ss:Type="String">宗教信仰</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663443628"><Data ss:Type="String">□无   □有                </Data></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663443628"><Data ss:Type="String">{{religion}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="21">
@@ -2704,7 +2704,7 @@
    <Row ss:AutoFitHeight="0" ss:Height="21">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663444736"><Data ss:Type="String">退休前工作单位</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663444756"/>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663444756"><Data ss:Type="String">{{work_unit}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="21">
@@ -2906,7 +2906,7 @@
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663449144"><Data ss:Type="String">疼痛</Data></Cell>
     <Cell ss:MergeAcross="9" ss:StyleID="m2020663449164"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">{{life8}}，部位</Font><U><Font
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">{{life8}}</Font><U><Font
         html:Color="#000000">            </Font></U></ss:Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
@@ -2941,7 +2941,7 @@
    <Row ss:AutoFitHeight="0" ss:Height="41.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663449936"><Data ss:Type="String">活动能力</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663449956"><Data ss:Type="String">{{life13}}__________</Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663449956"><Data ss:Type="String">{{life13}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
@@ -2951,7 +2951,7 @@
        html:Face="宋体" html:Color="#000000">个月内跌倒</Font></ss:Data></Cell>
     <Cell ss:MergeAcross="9" ss:StyleID="m2020663449996"><ss:Data ss:Type="String"
       xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">{{life14}}</Font><U><Font
-        html:Color="#000000">      </Font></U><Font html:Color="#000000">次</Font></ss:Data></Cell>
+        html:Color="#000000">      </Font></U><Font html:Color="#000000"></Font></ss:Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
@@ -2973,25 +2973,25 @@
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663453304"><Data ss:Type="String">性格、兴趣爱好</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663453324"/>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663453324"><Data ss:Type="String">{{hobby}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663453344"><Data ss:Type="String">特殊生活习惯</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663453364"/>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663453364"><Data ss:Type="String">{{living_habit}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663450768"><Data ss:Type="String">食物及药物过敏史</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663450788"/>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663450788"><Data ss:Type="String">{{allergy}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="24.9375">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663450808"><Data ss:Type="String">其他需注意的事项</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663450828"/>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663450828"><Data ss:Type="String">{{other_note}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="15">
@@ -3012,14 +3012,14 @@
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="32.0625">
     <Cell ss:StyleID="s90"/>
-    <Cell ss:MergeAcross="11" ss:StyleID="s350"><Data ss:Type="String">领取物品：&#160;□手环_____________   &#160;□门卡____________    □其他 _____________    </Data></Cell>
+    <Cell ss:MergeAcross="11" ss:StyleID="s350"><Data ss:Type="String">领取物品：&#160;{{wristband}}_____________   &#160;{{door_card}}____________    □其他 {{other}}    </Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="45">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="11" ss:StyleID="s93"><ss:Data ss:Type="String"
       xmlns="http://www.w3.org/TR/REC-html40"><B><Font html:Color="#000000">长者住户姓名：</Font><U><Font
-         html:Color="#000000">                   </Font></U><Font
+         html:Color="#000000">{{name}}</Font></U><Font
         html:Color="#000000">  签名：</Font><U><Font html:Color="#000000">               </Font></U><Font
         html:Color="#000000">  日期：</Font><U><Font html:Color="#000000">               </Font></U><Font
         html:Color="#000000">     </Font></B></ss:Data></Cell>
@@ -3029,7 +3029,7 @@
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="11" ss:StyleID="s93"><ss:Data ss:Type="String"
       xmlns="http://www.w3.org/TR/REC-html40"><B><Font html:Color="#000000">长者监护人姓名： </Font><U><Font
-         html:Color="#000000">               </Font></U><Font html:Color="#000000">   签名：</Font><U><Font
+         html:Color="#000000">{{guardian}}</Font></U><Font html:Color="#000000">   签名：</Font><U><Font
          html:Color="#000000">               </Font></U><Font html:Color="#000000">  日期：</Font><U><Font
          html:Color="#000000">               </Font></U><Font html:Color="#000000">   </Font></B></ss:Data></Cell>
     <Cell ss:StyleID="s90"/>
