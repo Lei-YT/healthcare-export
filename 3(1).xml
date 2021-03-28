@@ -2736,7 +2736,7 @@
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="21.9375">
     <Cell ss:StyleID="s90"/>
-    <Cell ss:MergeAcross="1" ss:MergeDown="3" ss:StyleID="m2020663445232"><Data
+    <Cell ss:MergeAcross="1" ss:MergeDown="{{member_cnt}}" ss:StyleID="m2020663445232"><Data
       ss:Type="String">配偶及家庭成员</Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663445252"><Data ss:Type="String">姓名</Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663445272"><Data ss:Type="String">关系</Data></Cell>
@@ -2745,36 +2745,10 @@
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663445332"><Data ss:Type="String">工作单位</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
+   {{spouse_member}}
    <Row ss:AutoFitHeight="0" ss:Height="21.9375">
     <Cell ss:StyleID="s90"/>
-    <Cell ss:Index="4" ss:MergeAcross="1" ss:StyleID="m2020663449520"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m2020663449540"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m2020663449560"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m2020663449580"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m2020663449600"/>
-    <Cell ss:StyleID="s90"/>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="21.9375">
-    <Cell ss:StyleID="s90"/>
-    <Cell ss:Index="4" ss:MergeAcross="1" ss:StyleID="m2020663449620"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m2020663449640"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m2020663449660"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m2020663449680"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m2020663449700"/>
-    <Cell ss:StyleID="s90"/>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="21.9375">
-    <Cell ss:StyleID="s90"/>
-    <Cell ss:Index="4" ss:MergeAcross="1" ss:StyleID="m2020663446192"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m2020663446212"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m2020663446232"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m2020663446252"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m2020663446272"/>
-    <Cell ss:StyleID="s90"/>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="21.9375">
-    <Cell ss:StyleID="s90"/>
-    <Cell ss:MergeAcross="1" ss:MergeDown="3" ss:StyleID="m2020663446292"><Data
+    <Cell ss:MergeAcross="1" ss:MergeDown="{{member_cnt}}" ss:StyleID="m2020663446292"><Data
       ss:Type="String">其他联系人</Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663446312"><Data ss:Type="String">姓名</Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663446332"><Data ss:Type="String">关系</Data></Cell>
@@ -2782,30 +2756,7 @@
     <Cell ss:MergeAcross="3" ss:StyleID="m2020663446372"><Data ss:Type="String">联系电话</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="21.9375">
-    <Cell ss:StyleID="s90"/>
-    <Cell ss:Index="4" ss:MergeAcross="1" ss:StyleID="m2020663446816"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m2020663446836"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m2020663446856"/>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663446876"/>
-    <Cell ss:StyleID="s90"/>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="21.9375">
-    <Cell ss:StyleID="s90"/>
-    <Cell ss:Index="4" ss:MergeAcross="1" ss:StyleID="m2020663446896"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m2020663446916"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m2020663446936"/>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663446956"/>
-    <Cell ss:StyleID="s90"/>
-   </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="21.9375">
-    <Cell ss:StyleID="s90"/>
-    <Cell ss:Index="4" ss:MergeAcross="1" ss:StyleID="m2020663447024"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m2020663447044"/>
-    <Cell ss:MergeAcross="1" ss:StyleID="m2020663447064"/>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663447084"/>
-    <Cell ss:StyleID="s90"/>
-   </Row>
+   {{other_member}}
    <Row ss:AutoFitHeight="0" ss:Height="26.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:StyleID="s253"/>

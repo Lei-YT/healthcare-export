@@ -1,11 +1,11 @@
 <?php
 
-$query = '?token=4ae1c6cb336596c0e3d5242ce10b0682a15a3ac3&user_id=21&senior_id=65';
-$initData = curl_get("http://test.app.newpinehealthcare.com/api/app/initialMesDetail$query");
+$query = '?token=ae4999b494dabec8a98cf6aa046c45faee3868bf&user_id=3&senior_id=35';
+$initData = curl_get("http://app.newpinehealthcare.com/api/app/initialMesDetail$query");
 $initData = json_decode($initData, true);
 $initData = $initData['data'];
 
-$data = curl_get("http://test.app.newpinehealthcare.com/api/app/liveSignDetail$query");
+$data = curl_get("http://app.newpinehealthcare.com/api/app/liveSignDetail$query");
 $data = json_decode($data, true);
 $data = $data['data'];
 
@@ -22,8 +22,10 @@ $con = str_replace('{{sin}}', $initData['sin'], $con);
 $con = str_replace('{{idcard}}', $initData['idcard'], $con);
 $con = str_replace('{{birthday}}', $initData['birthday'], $con);
 
+// 长者信息:
+// ? 复印件; 邮箱
 $con = str_replace('{{wechat_number}}', $data['wechat_number'], $con);
-$con = str_replace('{{email}}', $data['email'], $con);
+$con = str_replace('{{email}}', isset($data['email']) ? $data['email'] : '', $con);
 
 $con = str_replace('{{serial_num}}', $data['serial_num'], $con);
 // 监护人
@@ -74,8 +76,6 @@ if ($data['religion'] == '无' ) {
 } else {
     $con = str_replace('{{religion}}', '□无    ☑有 ' . $data['religion'], $con);
 }
-// $con = str_replace('{{birthday}}', $data['birthday'], $con);
-// $con = str_replace('{{sin}}', $data['sin'], $con);
 $con = str_replace('{{status}}', $data['status'], $con);
 $con = str_replace('{{zodiac}}', $data['zodiac'], $con);
 $con = str_replace('{{work_unit}}', $data['work_unit'], $con);
@@ -86,7 +86,29 @@ $con = checkbox_replace($con, $data, 'marital_status', ['', '未婚', '已婚', 
 $con = checkbox_replace($con, $data, 'medical_pay_method', ['', '城镇职工基本医疗保险', '城镇居民基本医疗保险 ', '新型农村合作医疗 ', '贫困救助 ', '商业医疗保险 ', '全公费 ', '全自费', '其他']);
 $con = checkbox_replace($con, $data, 'live_status', ['', '独居', '与配偶/伴侣居住', '与子女居住', '与父母居住', '与兄弟姐妹居住', '与其他亲属居住', '与非亲属关系的人居住', '养老机构']);
 $con = checkbox_replace($con, $data, 'money_source', ['', '退休金/养老金', '子女补贴', '亲友资助']);
+// 家庭成员
+$spouse_member = '';
+$other_member = '';
+$member_cnt = count($data['family_member']);
+foreach ($data['family_member'] as $key => $member) {
+    $spouse_member .= '<Row ss:AutoFitHeight="0" ss:Height="21.9375">';
+    $spouse_member .= '<Cell ss:Index="4" ss:MergeAcross="1" ss:StyleID="m2020663449520"><Data ss:Type="String">' . $member['spouse_name'] . '</Data></Cell>';
+    $spouse_member .= '<Cell ss:MergeAcross="1" ss:StyleID="m2020663449620"><Data ss:Type="String">' . $member['spouse_relation'] . '</Data></Cell>';
+    $spouse_member .= '<Cell ss:MergeAcross="1" ss:StyleID="m2020663449620"><Data ss:Type="String">' . $member['spouse_address'] . '</Data></Cell>';
+    $spouse_member .= '<Cell ss:MergeAcross="1" ss:StyleID="m2020663449620"><Data ss:Type="String">' . $member['spouse_phone'] . '</Data></Cell>';
+    $spouse_member .= '<Cell ss:MergeAcross="1" ss:StyleID="m2020663449600"><Data ss:Type="String">' . $member['spouse_work'] . '</Data></Cell>';
+    $spouse_member .= '</Row>';
 
+    $other_member .= '<Row ss:AutoFitHeight="0" ss:Height="21.9375">';
+    $other_member .= '<Cell ss:Index="4" ss:MergeAcross="1" ss:StyleID="m2020663446816"><Data ss:Type="String">' . $member['other_name'] . '</Data></Cell>';
+    $other_member .= '<Cell ss:MergeAcross="1" ss:StyleID="m2020663446836"><Data ss:Type="String">' . $member['other_relation'] . '</Data></Cell>';
+    $other_member .= '<Cell ss:MergeAcross="1" ss:StyleID="m2020663446836"><Data ss:Type="String">' . $member['other_address'] . '</Data></Cell>';
+    $other_member .= '<Cell ss:MergeAcross="3" ss:StyleID="m2020663446876"><Data ss:Type="String">' . $member['other_phone'] . '</Data></Cell>';
+    $other_member .= '</Row>';
+}
+$con = str_replace('{{member_cnt}}', $member_cnt, $con);
+$con = str_replace('{{spouse_member}}', $spouse_member, $con);
+$con = str_replace('{{other_member}}', $other_member, $con);
 // 生活信息
 // todo: drinking_other 是哪个
 $life_mes_setting = [
@@ -148,7 +170,6 @@ function checkbox_replace($con, $data, $param, $options)
 function checkbox_replace_value($con, $value, $param, $options)
 {
     $text = '';
-    // $arr = explode(',', $data[$param]);
     foreach ($options as $k => $v) {
         if ($v == '') continue;
         $text .= $k == $value ? '☑' : '□';
