@@ -2512,7 +2512,7 @@
       xmlns="http://www.w3.org/TR/REC-html40"><U><Font html:Color="#000000"><Data ss:Type="String">{{service_fee_month}}</Data></Font></U><Font
        html:Color="#000000">元人民币</Font></ss:Data></Cell>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663441092"><Data ss:Type="String">支付方式</Data></Cell>
-    <Cell ss:MergeAcross="3" ss:StyleID="m2020663441112"><Data ss:Type="String">月交{{pey_method}}</Data></Cell>
+    <Cell ss:MergeAcross="3" ss:StyleID="m2020663441112"><Data ss:Type="String">月交{{pay_method}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
@@ -2602,7 +2602,7 @@
    <Row ss:AutoFitHeight="0" ss:Height="23.0625">
     <Cell ss:StyleID="s90"/>
     <Cell ss:MergeAcross="1" ss:StyleID="m2020663445984"><Data ss:Type="String">复印件影像存档</Data></Cell>
-    <Cell ss:MergeAcross="9" ss:StyleID="m2020663446004"><Data ss:Type="String"> {{file}}</Data></Cell>
+    <Cell ss:MergeAcross="9" ss:StyleID="m2020663446004"><Data ss:Type="String"> {{files}}</Data></Cell>
     <Cell ss:StyleID="s90"/>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="15">
